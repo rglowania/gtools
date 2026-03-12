@@ -121,7 +121,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
 </div>
 
-<footer>&copy; 2025 Robin Glowania</footer>
+<footer>&copy; <span id="year"></span> Robin Glowania</footer>
 
 <script>
 function setTheme(t) {
@@ -140,6 +140,7 @@ function setTheme(t) {
   try { saved = localStorage.getItem('honorly-theme') || 'system'; } catch(e){}
   setTheme(saved);
 })();
+document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
