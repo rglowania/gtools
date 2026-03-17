@@ -181,6 +181,17 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       </div>
     </a>
 
+    <a class="app-card" href="https://rglowania.github.io/pdf-editor/">
+      <div class="app-tag">Utility</div>
+      <span class="neu-badge" id="neu-pdfeditor">Neu</span>
+      <div class="app-name"><span>PDF</span>-Editor</div>
+      <div class="app-desc">PDF-Dateien direkt im Browser bearbeiten.</div>
+      <div class="app-footer">
+        <span class="app-url">rglowania.github.io/pdf-editor</span>
+        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </div>
+    </a>
+
     <a class="app-card" href="https://rglowania.github.io/feierabend-uhr">
       <div class="app-tag">Utility</div>
       <div class="app-name"><span>Feier</span>abend-Uhr</div>
@@ -215,7 +226,7 @@ function setTheme(t) {
   setTheme(saved);
 })();
 if (new Date() > new Date('2026-04-17')) {
-  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score'].forEach(function(id){
+  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor'].forEach(function(id){
     var el = document.getElementById(id);
     if (el) el.style.display = 'none';
   });
