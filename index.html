@@ -119,8 +119,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
     <a class="app-card" href="https://rglowania.github.io/splitting-vorteil/">
       <div class="app-tag">ESt &middot; &sect;32a EStG</div>
-      <span class="neu-badge">Neu</span>
-      <div class="app-name"><span>Splitting</span>-Vorteil</div>
+      <span class="neu-badge" id="neu-splitting">Neu</span>
       <div class="app-desc">Berechnung des steuerlichen Vorteils durch Ehegattensplitting nach &sect;&nbsp;32a EStG.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/splitting-vorteil</span>
@@ -130,8 +129,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
     <a class="app-card" href="https://rglowania.github.io/zumutbare-belastungen/">
       <div class="app-tag">§33 EStG</div>
-      <span class="neu-badge">Neu</span>
-      <div class="app-name"><span>Zumutbare</span> Belastung</div>
+      <span class="neu-badge" id="neu-zumutbare">Neu</span>
       <div class="app-desc">Berechnung der zumutbaren Belastung nach &sect;&nbsp;33 EStG &mdash; Grundlage f&uuml;r au&szlig;ergew&ouml;hnliche Belastungen.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/zumutbare-belastungen</span>
@@ -151,6 +149,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
     <a class="app-card" href="https://rglowania.github.io/kontify/">
       <div class="app-tag">Zeiterfassung</div>
+      <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
       <div class="app-name"><span>Zeit</span>erfassung</div>
       <div class="app-desc">Zeiterfassung und Projektverwaltung im Browser.</div>
       <div class="app-footer">
@@ -171,8 +170,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
     <a class="app-card" href="https://rglowania.github.io/score-simulator/">
       <div class="app-tag">Schufa</div>
-      <span class="neu-badge">Neu</span>
-      <div class="app-name"><span>Score</span>-Simulator</div>
+      <span class="neu-badge" id="neu-score">Neu</span>
       <div class="app-desc">Simulation und Analyse von Scores &mdash; direkt auf GitHub.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/score-simulator</span>
@@ -214,6 +212,16 @@ function setTheme(t) {
   setTheme(saved);
 })();
 document.getElementById('year').textContent = new Date().getFullYear();
+if (new Date() > new Date('2026-04-17')) {
+  var b = document.getElementById('neu-zeiterfassung');
+  if (b) b.style.display = 'none';
+}
+['neu-splitting','neu-zumutbare','neu-score'].forEach(function(id){
+  if (new Date() > new Date('2026-04-17')) {
+    var el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  }
+});
 </script>
 </body>
 </html>
