@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>gTools</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230c1410'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%235d9e7a'>g</text></svg>">
+<link rel="apple-touch-icon" href="apple-touch-icon.svg">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP5Y5QVKZL"></script>
 <script>
@@ -176,12 +177,28 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       </div>
     </a>
 
+  </div>
+
+  <div class="section-heading">Steuer (Zukunftsmusik)</div>
+  <div class="apps-grid">
+
     <a class="app-card" href="https://rglowania.github.io/steuerreform-rechner/">
       <div class="app-tag">ESt &middot; Reform</div>
       <div class="app-name"><span>Steuerreform</span>-Rechner</div>
       <div class="app-desc">Vergleich aktueller &sect;&nbsp;32a EStG-Tarif vs. Bach/DIW-Reformvorschlag &mdash; Einzel- und Zusammenveranlagung.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/steuerreform-rechner</span>
+        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://rglowania.github.io/av-depot/">
+      <div class="app-tag">Riester-Nachfolger</div>
+      <span class="neu-badge" id="neu-avdepot">Neu</span>
+      <div class="app-name"><span>Altersvorsorge</span>depot</div>
+      <div class="app-desc">Rechner zum neuen Altersvorsorgedepot &mdash; Nachfolger der Riester-Rente.</div>
+      <div class="app-footer">
+        <span class="app-url">rglowania.github.io/av-depot</span>
         <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </div>
     </a>
@@ -258,7 +275,7 @@ function setTheme(t) {
   setTheme(saved);
 })();
 if (new Date() > new Date('2026-04-17')) {
-  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen'].forEach(function(id){
+  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen','neu-avdepot'].forEach(function(id){
     var el = document.getElementById(id);
     if (el) el.style.display = 'none';
   });
