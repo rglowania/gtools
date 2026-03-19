@@ -49,6 +49,9 @@ h1 span{color:var(--accent);}
 .apps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
 @media(max-width:900px){.apps-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:600px){.apps-grid{grid-template-columns:1fr;}}
+.section-heading{display:flex;align-items:center;gap:16px;margin:32px 0 16px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
+.section-heading::after{content:'';flex:1;height:1px;background:var(--border);}
+.section-heading:first-child{margin-top:0;}
 .app-card{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--border);padding:24px 24px 20px;position:relative;transition:background .2s,border-color .2s;}
 .app-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
 .app-card:hover{border-color:var(--accent);background:var(--surface2);}
@@ -86,6 +89,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <p class="subtitle">Tools created by Robin Glowania</p>
   </header>
 
+  <div class="section-heading">Steuer</div>
   <div class="apps-grid">
 
     <a class="app-card" href="https://rglowania.github.io/brutto-netto">
@@ -129,6 +133,17 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       </div>
     </a>
 
+    <a class="app-card" href="https://rglowania.github.io/sv">
+      <div class="app-tag">Sozialversicherung</div>
+      <span class="neu-badge" id="neu-sv">Neu</span>
+      <div class="app-name"><span>SV</span>-Beitragss&auml;tze</div>
+      <div class="app-desc">Aktuelle Beitragss&auml;tze zur Sozialversicherung &mdash; Kranken-, Pflege-, Renten- und Arbeitslosenversicherung.</div>
+      <div class="app-footer">
+        <span class="app-url">rglowania.github.io/sv</span>
+        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </div>
+    </a>
+
     <a class="app-card" href="https://rglowania.github.io/zumutbare-belastungen/">
       <div class="app-tag">§33 EStG</div>
       <span class="neu-badge" id="neu-zumutbare">Neu</span>
@@ -136,6 +151,17 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="app-desc">Berechnung der zumutbaren Belastung nach &sect;&nbsp;33 EStG &mdash; Grundlage f&uuml;r au&szlig;ergew&ouml;hnliche Belastungen.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/zumutbare-belastungen</span>
+        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </div>
+    </a>
+
+    <a class="app-card" href="https://rglowania.github.io/steuerfristen/">
+      <div class="app-tag">Fristen &middot; AO</div>
+      <span class="neu-badge" id="neu-steuerfristen">Neu</span>
+      <div class="app-name"><span>Steuer</span>fristen</div>
+      <div class="app-desc">&#220;bersicht steuerlicher Fristen und Abgabetermine nach der Abgabenordnung.</div>
+      <div class="app-footer">
+        <span class="app-url">rglowania.github.io/steuerfristen</span>
         <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </div>
     </a>
@@ -150,6 +176,21 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       </div>
     </a>
 
+    <a class="app-card" href="https://rglowania.github.io/steuerreform-rechner/">
+      <div class="app-tag">ESt &middot; Reform</div>
+      <div class="app-name"><span>Steuerreform</span>-Rechner</div>
+      <div class="app-desc">Vergleich aktueller &sect;&nbsp;32a EStG-Tarif vs. Bach/DIW-Reformvorschlag &mdash; Einzel- und Zusammenveranlagung.</div>
+      <div class="app-footer">
+        <span class="app-url">rglowania.github.io/steuerreform-rechner</span>
+        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="section-heading">Helferlein</div>
+  <div class="apps-grid">
+
     <a class="app-card" href="https://rglowania.github.io/zeiterfassung/">
       <div class="app-tag">Zeiterfassung</div>
       <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
@@ -161,12 +202,13 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       </div>
     </a>
 
-    <a class="app-card" href="https://rglowania.github.io/steuerreform-rechner/">
-      <div class="app-tag">ESt &middot; Reform</div>
-      <div class="app-name"><span>Steuerreform</span>-Rechner</div>
-      <div class="app-desc">Vergleich aktueller &sect;&nbsp;32a EStG-Tarif vs. Bach/DIW-Reformvorschlag &mdash; Einzel- und Zusammenveranlagung.</div>
+    <a class="app-card" href="https://rglowania.github.io/pdf-editor/">
+      <div class="app-tag">Utility</div>
+      <span class="neu-badge" id="neu-pdfeditor">Neu</span>
+      <div class="app-name"><span>PDF</span>-Editor</div>
+      <div class="app-desc">PDF-Dateien direkt im Browser bearbeiten.</div>
       <div class="app-footer">
-        <span class="app-url">rglowania.github.io/steuerreform-rechner</span>
+        <span class="app-url">rglowania.github.io/pdf-editor</span>
         <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </div>
     </a>
@@ -178,17 +220,6 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="app-desc">Simulation und Analyse von Scores &mdash; direkt auf GitHub.</div>
       <div class="app-footer">
         <span class="app-url">rglowania.github.io/score-simulator</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/pdf-editor/">
-      <div class="app-tag">Utility</div>
-      <span class="neu-badge" id="neu-pdfeditor">Neu</span>
-      <div class="app-name"><span>PDF</span>-Editor</div>
-      <div class="app-desc">PDF-Dateien direkt im Browser bearbeiten.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/pdf-editor</span>
         <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </div>
     </a>
@@ -227,7 +258,7 @@ function setTheme(t) {
   setTheme(saved);
 })();
 if (new Date() > new Date('2026-04-17')) {
-  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor'].forEach(function(id){
+  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen'].forEach(function(id){
     var el = document.getElementById(id);
     if (el) el.style.display = 'none';
   });
