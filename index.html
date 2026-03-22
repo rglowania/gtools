@@ -6,278 +6,405 @@
 <title>gTools</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230c1410'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%235d9e7a'>g</text></svg>">
 <link rel="apple-touch-icon" sizes="180x180" href="https://rglowania.github.io/gtools/apple-touch-icon.png">
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP5Y5QVKZL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-VP5Y5QVKZL');
-</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-VP5Y5QVKZL');</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-:root,[data-theme="dark"]{
-  --bg:#0c1410;--surface:#13201a;--surface2:#192b22;--border:#213328;
-  --accent:#5d9e7a;--accent-lt:#89c4a2;--accent-dim:rgba(93,158,122,0.13);
-  --text:#ddeee5;--text-muted:#6e9480;
-}
-[data-theme="light"]{
-  --bg:#f0f7f3;--surface:#ffffff;--surface2:#e6f2eb;--border:#bdd8c8;
-  --accent:#2e7a50;--accent-lt:#1e5c3a;--accent-dim:rgba(46,122,80,0.10);
-  --text:#0f1f16;--text-muted:#4d7a5e;
-}
-@media(prefers-color-scheme:light){
-  :root:not([data-theme]){
-    --bg:#f0f7f3;--surface:#ffffff;--surface2:#e6f2eb;--border:#bdd8c8;
-    --accent:#2e7a50;--accent-lt:#1e5c3a;--accent-dim:rgba(46,122,80,0.10);
-    --text:#0f1f16;--text-muted:#4d7a5e;
-  }
-}
+:root,[data-theme="dark"]{--bg:#0c1410;--surface:#13201a;--surface2:#192b22;--border:#213328;--accent:#5d9e7a;--accent-lt:#89c4a2;--accent-dim:rgba(93,158,122,0.13);--text:#ddeee5;--text-muted:#6e9480;}
+[data-theme="light"]{--bg:#f0f7f3;--surface:#ffffff;--surface2:#e6f2eb;--border:#bdd8c8;--accent:#2e7a50;--accent-lt:#1e5c3a;--accent-dim:rgba(46,122,80,0.10);--text:#0f1f16;--text-muted:#4d7a5e;}
+@media(prefers-color-scheme:light){:root:not([data-theme]){--bg:#f0f7f3;--surface:#ffffff;--surface2:#e6f2eb;--border:#bdd8c8;--accent:#2e7a50;--accent-lt:#1e5c3a;--accent-dim:rgba(46,122,80,0.10);--text:#0f1f16;--text-muted:#4d7a5e;}}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-weight:300;min-height:100vh;padding:20px 20px 80px;transition:background .25s,color .25s;}
+body{background:var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;font-weight:300;min-height:100vh;padding:28px 20px 80px;transition:background .25s,color .25s;}
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(93,158,122,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(93,158,122,0.04) 1px,transparent 1px);background-size:40px 40px;}
-.container{max-width:1200px;margin:0 auto;position:relative;z-index:1;}
+.container{max-width:760px;margin:0 auto;position:relative;z-index:1;}
 .theme-toggle{position:fixed;top:18px;right:20px;display:flex;gap:3px;z-index:1000;background:var(--surface);border:1px solid var(--border);padding:4px;}
 .theme-btn{width:28px;height:28px;background:transparent;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:all .2s;padding:0;}
 .theme-btn:hover{color:var(--accent);}
 .theme-btn.active{color:var(--accent);background:var(--accent-dim);}
 .theme-btn svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 header{text-align:center;margin-bottom:24px;}
-.badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent-dim);padding:4px 14px;margin-bottom:18px;}
-h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,44px);font-weight:600;line-height:1.15;color:var(--text);margin-bottom:10px;}
-h1 span{color:var(--accent);}
+h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,44px);font-weight:600;line-height:1.15;color:var(--text);margin-bottom:8px;}
+h1 a{color:var(--accent);text-decoration:none;}
 .subtitle{font-size:12px;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;letter-spacing:0.5px;}
-.apps-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
-@media(max-width:900px){.apps-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:600px){.apps-grid{grid-template-columns:1fr;}}
-.section-heading{display:flex;align-items:center;gap:16px;margin:32px 0 16px;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);}
-.section-heading::after{content:'';flex:1;height:1px;background:var(--border);}
-.section-heading:first-child{margin-top:0;}
-.app-card{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--border);padding:24px 24px 20px;position:relative;transition:background .2s,border-color .2s;}
-.app-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);}
-.app-card:hover{border-color:var(--accent);background:var(--surface2);}
-.app-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);border:1px solid var(--border);padding:2px 8px;margin-bottom:14px;}
-.app-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:10px;}
-.app-name span{color:var(--accent);}
-.neu-badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:#0c1410;background:var(--accent);padding:2px 8px;font-weight:500;position:absolute;top:16px;right:16px;}
-.app-desc{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);line-height:1.7;letter-spacing:0.3px;margin-bottom:18px;}
-.app-footer{display:flex;align-items:center;justify-content:space-between;padding-top:14px;border-top:1px solid var(--border);}
-.app-url{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);letter-spacing:0.5px;opacity:0.6;}
-.app-arrow{width:26px;height:26px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--text-muted);transition:border-color .2s,color .2s;flex-shrink:0;}
-.app-card:hover .app-arrow{border-color:var(--accent);color:var(--accent);}
-.app-arrow svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
+/* Search */
+.search-wrap{position:relative;margin-bottom:12px;}
+.search-input{width:100%;background:var(--surface);border:1px solid var(--border);color:var(--text);font-family:'IBM Plex Mono',monospace;font-size:12px;padding:10px 40px 10px 14px;outline:none;transition:border-color .2s;letter-spacing:0.5px;}
+.search-input::placeholder{color:var(--text-muted);}
+.search-input:focus{border-color:var(--accent);}
+.search-icon{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--text-muted);pointer-events:none;}
+.search-icon svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;}
+.search-clear{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);cursor:pointer;display:none;padding:2px 4px;}
+.search-clear svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;}
+.search-clear:hover{color:var(--accent);}
+
+/* Filter */
+.filter-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;justify-content:center;}
+.filter-btn{background:transparent;border:1px solid var(--border);color:var(--text-muted);font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;cursor:pointer;transition:all .2s;}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent);}
+.filter-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent);}
+
+/* Collapsible section (used in "Alle" mode) */
+.section-block{margin-bottom:12px;}
+.section-toggle{display:flex;align-items:flex-start;justify-content:space-between;cursor:pointer;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);user-select:none;transition:background .2s;}
+.section-toggle:hover{background:var(--surface2);}
+.section-toggle-left{display:flex;flex-direction:column;gap:8px;flex:1;}
+.section-toggle-meta{display:flex;align-items:center;gap:10px;}
+.section-toggle-title{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);}
+.section-toggle-count{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);}
+.section-toggle-arrow{color:var(--text-muted);transition:transform .25s;margin-top:2px;flex-shrink:0;}
+.section-toggle-arrow svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.section-toggle.open .section-toggle-arrow{transform:rotate(90deg);}
+.section-preview{display:flex;flex-wrap:wrap;gap:5px;}
+.section-preview-chip{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);border:1px solid var(--border);padding:2px 8px;letter-spacing:0.5px;}
+.section-body{display:none;border-left:3px solid var(--accent);border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
+.section-body.open{display:block;}
+
+/* Flat section label (used in filtered mode) */
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin:24px 0 8px;padding-bottom:8px;border-bottom:1px solid var(--border);display:none;}
+
+/* Tool row */
+.tool-row{display:flex;align-items:center;text-decoration:none;background:var(--surface);border-bottom:1px solid var(--border);padding:13px 16px;position:relative;transition:background .2s;gap:14px;}
+.section-body .tool-row{border-left:none;}
+.tool-row:last-child{border-bottom:none;}
+.tool-row:hover{background:var(--surface2);}
+/* standalone rows (filter mode) */
+.tool-row.standalone{border:1px solid var(--border);border-left:3px solid var(--accent);margin-bottom:6px;display:none;}
+.tool-row.standalone:hover{border-color:var(--accent);}
+.tool-emoji{font-size:18px;flex-shrink:0;width:28px;text-align:center;}
+.tool-info{flex:1;min-width:0;}
+.tool-name{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--text);line-height:1.2;}
+.tool-name span{color:var(--accent);}
+.tool-desc{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);letter-spacing:0.3px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tool-tag{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);border:1px solid var(--border);padding:2px 7px;flex-shrink:0;white-space:nowrap;}
+.tool-arrow{flex-shrink:0;color:var(--text-muted);transition:color .2s;}
+.tool-row:hover .tool-arrow{color:var(--accent);}
+.tool-arrow svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.neu-badge{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:#0c1410;background:var(--accent);padding:2px 6px;font-weight:500;flex-shrink:0;}
+
+#noResults{display:none;text-align:center;padding:32px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-muted);}
 footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:1px;color:var(--text-muted);opacity:0.6;}
+@media(max-width:500px){.tool-tag{display:none;}.tool-desc{display:none;}}
 </style>
 </head>
 <body>
 
 <div class="theme-toggle">
-  <button class="theme-btn" id="btn-dark" onclick="setTheme('dark')" title="Dunkel">
-    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-  </button>
-  <button class="theme-btn" id="btn-system" onclick="setTheme('system')" title="System">
-    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-  </button>
-  <button class="theme-btn" id="btn-light" onclick="setTheme('light')" title="Hell">
-    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-  </button>
+  <button class="theme-btn" id="btn-dark" onclick="setTheme('dark')" title="Dunkel"><svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  <button class="theme-btn" id="btn-system" onclick="setTheme('system')" title="System"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></button>
+  <button class="theme-btn" id="btn-light" onclick="setTheme('light')" title="Hell"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
 </div>
 
 <div class="container">
 
   <header>
-    <h1><a href="https://rglowania.github.io/gselection/" style="text-decoration:none;color:inherit;"><span>g</span></a>Tools</h1>
+    <h1><a href="https://rglowania.github.io/gselection/">g</a>Tools</h1>
     <p class="subtitle">Tools created by Robin Glowania</p>
   </header>
 
-  <div class="section-heading">Steuer</div>
-  <div class="apps-grid">
-
-    <a class="app-card" href="https://rglowania.github.io/brutto-netto">
-      <div class="app-tag">Lohn &middot; ESt</div>
-      <div class="app-name">💶 <span>Brutto</span>-Netto</div>
-      <div class="app-desc">Nettolohnberechnung f&uuml;r Arbeitnehmer in Deutschland &mdash; Einkommensteuer, Solidarit&auml;tszuschlag und Sozialversicherung.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/brutto-netto</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/gg-netto">
-      <div class="app-tag">Grenzg&auml;nger &middot; DBA</div>
-      <div class="app-name">🇨🇭 <span>Grenzg&auml;nger</span>-Netto</div>
-      <div class="app-desc">Nettolohnberechnung f&uuml;r Grenzg&auml;nger D/CH &mdash; Quellensteuer, Tarifkorrektur, Sozialversicherung und Mehrfachfunktionen.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/gg-netto</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/renten-netto">
-      <div class="app-tag">Rente &middot; CHF</div>
-      <div class="app-name">👴 <span>Renten</span>-Netto</div>
-      <div class="app-desc">Brutto-Netto-Rechner f&uuml;r Rentner mit Schweizer Pensionskasse &mdash; AHV, PK obligatorisch/&uuml;berobligatorisch, offizielle Anlage N-Gre Jahreskurse.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/renten-netto</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/splitting-vorteil/">
-      <div class="app-tag">ESt &middot; &sect;32a EStG</div>
-      <span class="neu-badge" id="neu-splitting">Neu</span>
-      <div class="app-name">👫 <span>Splitting</span>-Vorteil</div>
-      <div class="app-desc">Berechnung des steuerlichen Vorteils durch Ehegattensplitting nach &sect;&nbsp;32a EStG.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/splitting-vorteil</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/sv">
-      <div class="app-tag">Sozialversicherung</div>
-      <span class="neu-badge" id="neu-sv">Neu</span>
-      <div class="app-name">🏥 <span>SV</span>-Beitragss&auml;tze</div>
-      <div class="app-desc">Aktuelle Beitragss&auml;tze zur Sozialversicherung &mdash; Kranken-, Pflege-, Renten- und Arbeitslosenversicherung.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/sv</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/zumutbare-belastungen/">
-      <div class="app-tag">§33 EStG</div>
-      <span class="neu-badge" id="neu-zumutbare">Neu</span>
-      <div class="app-name">🏋️ <span>Zumutbare</span> Belastung</div>
-      <div class="app-desc">Berechnung der zumutbaren Belastung nach &sect;&nbsp;33 EStG &mdash; Grundlage f&uuml;r au&szlig;ergew&ouml;hnliche Belastungen.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/zumutbare-belastungen</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/steuerfristen/">
-      <div class="app-tag">Fristen &middot; AO</div>
-      <span class="neu-badge" id="neu-steuerfristen">Neu</span>
-      <div class="app-name">📅 <span>Steuer</span>fristen</div>
-      <div class="app-desc">&#220;bersicht steuerlicher Fristen und Abgabetermine nach der Abgabenordnung.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/steuerfristen</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/stbvv-rechner/">
-      <div class="app-tag">StBVV &middot; RVG</div>
-      <div class="app-name">⚖️ <span>StBVV</span>-Rechner</div>
-      <div class="app-desc">Honorarberechnung nach StBVV Tabellen A, B &amp; C sowie RVG &sect;&nbsp;13 &mdash; Fassungen alt und neu ab 01.07.2025, inkl. MwSt.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/stbvv-rechner</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
+  <div class="search-wrap">
+    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 14 Tools …" oninput="onSearch(this.value)">
+    <span class="search-icon" id="searchIcon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+    <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
 
-  <div class="section-heading">Steuer (Zukunftsmusik)</div>
-  <div class="apps-grid">
-
-    <a class="app-card" href="https://rglowania.github.io/steuerreform-rechner/">
-      <div class="app-tag">ESt &middot; Reform</div>
-      <div class="app-name">🔄 <span>Steuerreform</span>-Rechner</div>
-      <div class="app-desc">Vergleich aktueller &sect;&nbsp;32a EStG-Tarif vs. Bach/DIW-Reformvorschlag &mdash; Einzel- und Zusammenveranlagung.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/steuerreform-rechner</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
-    <a class="app-card" href="https://rglowania.github.io/av-depot/">
-      <div class="app-tag">Riester-Nachfolger</div>
-      <span class="neu-badge" id="neu-avdepot">Neu</span>
-      <div class="app-name">📈 <span>Altersvorsorge</span>depot</div>
-      <div class="app-desc">Rechner zum neuen Altersvorsorgedepot &mdash; Nachfolger der Riester-Rente.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/av-depot</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
-
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filter('all',this)">Alle</button>
+    <button class="filter-btn" onclick="filter('steuern',this)">Steuern</button>
+    <button class="filter-btn" onclick="filter('zukunft',this)">Zukunftsmusik</button>
+    <button class="filter-btn" onclick="filter('helferlein',this)">Helferlein</button>
   </div>
 
-  <div class="section-heading">Helferlein</div>
-  <div class="apps-grid">
-
-    <a class="app-card" href="https://rglowania.github.io/zeiterfassung/">
-      <div class="app-tag">Zeiterfassung</div>
-      <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
-      <div class="app-name">⏱️ <span>Zeit</span>erfassung</div>
-      <div class="app-desc">Zeiterfassung und Projektverwaltung im Browser.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/zeiterfassung</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+  <!-- ══ STEUER — collapsible block ══ -->
+  <div class="section-block" data-cat="steuern">
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <div class="section-toggle-left">
+        <div class="section-toggle-meta">
+          <span class="section-toggle-title">🧾 Steuern</span>
+          <span class="section-toggle-count">8 Tools</span>
+        </div>
+        <div class="section-preview">
+          <span class="section-preview-chip">💶 Brutto-Netto</span>
+          <span class="section-preview-chip">🇨🇭 Grenzgänger-Netto</span>
+          <span class="section-preview-chip">👴 Renten-Netto</span>
+          <span class="section-preview-chip">👫 Splitting-Vorteil</span>
+          <span class="section-preview-chip">🏥 SV-Beitragssätze</span>
+          <span class="section-preview-chip">🏋️ Zumutbare Belastung</span>
+          <span class="section-preview-chip">📅 Steuerfristen</span>
+          <span class="section-preview-chip">⚖️ StBVV-Rechner</span>
+        </div>
       </div>
-    </a>
+      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </div>
+    <div class="section-body">
 
-    <a class="app-card" href="https://rglowania.github.io/pdf-editor/">
-      <div class="app-tag">Utility</div>
-      <span class="neu-badge" id="neu-pdfeditor">Neu</span>
-      <div class="app-name">📄 <span>PDF</span>-Editor</div>
-      <div class="app-desc">PDF-Dateien direkt im Browser bearbeiten.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/pdf-editor</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
+      <a class="tool-row" href="https://rglowania.github.io/brutto-netto" data-cat="steuern">
+        <span class="tool-emoji">&#x1F4B6;</span>
+        <div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto</div><div class="tool-desc">Nettolohnberechnung &mdash; ESt, SolZ, Sozialversicherung</div></div>
+        <span class="tool-tag">Lohn &middot; ESt</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
 
-    <a class="app-card" href="https://rglowania.github.io/score-simulator/">
-      <div class="app-tag">Schufa</div>
-      <span class="neu-badge" id="neu-score">Neu</span>
-      <div class="app-name">📊 <span>Score</span>-Simulator</div>
-      <div class="app-desc">Simulation und Analyse von Scores &mdash; direkt auf GitHub.</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/score-simulator</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
+      <a class="tool-row" href="https://rglowania.github.io/gg-netto" data-cat="steuern">
+        <span class="tool-emoji">&#x1F1E8;&#x1F1ED;</span>
+        <div class="tool-info"><div class="tool-name"><span>Grenzg&auml;nger</span>-Netto</div><div class="tool-desc">Quellensteuer, Tarifkorrektur, Sozialversicherung D/CH</div></div>
+        <span class="tool-tag">Grenzg&auml;nger &middot; DBA</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
 
-    <a class="app-card" href="https://rglowania.github.io/feierabend-uhr">
-      <div class="app-tag">Utility</div>
-      <div class="app-name">🍺 <span>Feier</span>abend-Uhr</div>
-      <div class="app-desc">Wann ist endlich Feierabend?</div>
-      <div class="app-footer">
-        <span class="app-url">rglowania.github.io/feierabend-uhr</span>
-        <span class="app-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </div>
-    </a>
+      <a class="tool-row" href="https://rglowania.github.io/renten-netto" data-cat="steuern">
+        <span class="tool-emoji">&#x1F474;</span>
+        <div class="tool-info"><div class="tool-name"><span>Renten</span>-Netto</div><div class="tool-desc">AHV, PK obligatorisch/&uuml;berobligatorisch, Anlage N-Gre</div></div>
+        <span class="tool-tag">Rente &middot; CHF</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
 
+      <a class="tool-row" href="https://rglowania.github.io/splitting-vorteil/" data-cat="steuern">
+        <span class="tool-emoji">&#x1F46B;</span>
+        <div class="tool-info"><div class="tool-name"><span>Splitting</span>-Vorteil</div><div class="tool-desc">Steuerlicher Vorteil durch Ehegattensplitting &sect;&nbsp;32a EStG</div></div>
+        <span class="neu-badge" id="neu-splitting">Neu</span>
+        <span class="tool-tag">ESt &middot; &sect;32a EStG</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/sv" data-cat="steuern">
+        <span class="tool-emoji">&#x1F3E5;</span>
+        <div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div>
+        <span class="neu-badge" id="neu-sv">Neu</span>
+        <span class="tool-tag">Sozialversicherung</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/zumutbare-belastungen/" data-cat="steuern">
+        <span class="tool-emoji">&#x1F3CB;&#xFE0F;</span>
+        <div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div>
+        <span class="neu-badge" id="neu-zumutbare">Neu</span>
+        <span class="tool-tag">&sect;33 EStG</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/steuerfristen/" data-cat="steuern">
+        <span class="tool-emoji">&#x1F4C5;</span>
+        <div class="tool-info"><div class="tool-name"><span>Steuer</span>fristen</div><div class="tool-desc">Abgabetermine und Fristen nach der Abgabenordnung</div></div>
+        <span class="neu-badge" id="neu-steuerfristen">Neu</span>
+        <span class="tool-tag">Fristen &middot; AO</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/stbvv-rechner/" data-cat="steuern">
+        <span class="tool-emoji">&#x2696;&#xFE0F;</span>
+        <div class="tool-info"><div class="tool-name"><span>StBVV</span>-Rechner</div><div class="tool-desc">Honorare nach StBVV Tab. A, B, C &amp; RVG &sect;&nbsp;13</div></div>
+        <span class="tool-tag">StBVV &middot; RVG</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+    </div>
   </div>
+
+  <!-- ══ ZUKUNFTSMUSIK — collapsible block ══ -->
+  <div class="section-block" data-cat="zukunft">
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <div class="section-toggle-left">
+        <div class="section-toggle-meta">
+          <span class="section-toggle-title">🔮 Zukunftsmusik</span>
+          <span class="section-toggle-count">2 Tools</span>
+        </div>
+        <div class="section-preview">
+          <span class="section-preview-chip">🔄 Steuerreform-Rechner</span>
+          <span class="section-preview-chip">📈 Altersvorsorgedepot</span>
+        </div>
+      </div>
+      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </div>
+    <div class="section-body">
+
+      <a class="tool-row" href="https://rglowania.github.io/steuerreform-rechner/" data-cat="zukunft">
+        <span class="tool-emoji">&#x1F504;</span>
+        <div class="tool-info"><div class="tool-name"><span>Steuerreform</span>-Rechner</div><div class="tool-desc">Bach/DIW-Reformvorschlag vs. aktueller &sect;&nbsp;32a EStG-Tarif</div></div>
+        <span class="tool-tag">ESt &middot; Reform</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/av-depot/" data-cat="zukunft">
+        <span class="tool-emoji">&#x1F4C8;</span>
+        <div class="tool-info"><div class="tool-name"><span>Altersvorsorge</span>depot</div><div class="tool-desc">Rechner zum neuen Altersvorsorgedepot &mdash; Riester-Nachfolger</div></div>
+        <span class="neu-badge" id="neu-avdepot">Neu</span>
+        <span class="tool-tag">Riester-Nachfolger</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- ══ HELFERLEIN — collapsible block ══ -->
+  <div class="section-block" data-cat="helferlein">
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <div class="section-toggle-left">
+        <div class="section-toggle-meta">
+          <span class="section-toggle-title">🛠️ Helferlein</span>
+          <span class="section-toggle-count">4 Tools</span>
+        </div>
+        <div class="section-preview">
+          <span class="section-preview-chip">⏱️ Zeiterfassung</span>
+          <span class="section-preview-chip">📄 PDF-Editor</span>
+          <span class="section-preview-chip">📊 Score-Simulator</span>
+          <span class="section-preview-chip">🍺 Feierabend-Uhr</span>
+        </div>
+      </div>
+      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </div>
+    <div class="section-body">
+
+      <a class="tool-row" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein">
+        <span class="tool-emoji">&#x23F1;&#xFE0F;</span>
+        <div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div>
+        <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
+        <span class="tool-tag">Zeiterfassung</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/pdf-editor/" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F4C4;</span>
+        <div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div>
+        <span class="neu-badge" id="neu-pdfeditor">Neu</span>
+        <span class="tool-tag">Utility</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F4CA;</span>
+        <div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div>
+        <span class="neu-badge" id="neu-score">Neu</span>
+        <span class="tool-tag">Schufa</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/feierabend-uhr" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F37A;</span>
+        <div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div>
+        <span class="tool-tag">Utility</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Flat standalone rows for filter mode (hidden in "all" mode) -->
+  <div id="flatList">
+    <div class="section-label" id="lbl-steuern">Steuern</div>
+    <a class="tool-row standalone" href="https://rglowania.github.io/brutto-netto" data-cat="steuern"><span class="tool-emoji">&#x1F4B6;</span><div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto</div><div class="tool-desc">Nettolohnberechnung &mdash; ESt, SolZ, Sozialversicherung</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/gg-netto" data-cat="steuern"><span class="tool-emoji">&#x1F1E8;&#x1F1ED;</span><div class="tool-info"><div class="tool-name"><span>Grenzg&auml;nger</span>-Netto</div><div class="tool-desc">Quellensteuer, Tarifkorrektur, Sozialversicherung D/CH</div></div><span class="tool-tag">Grenzg&auml;nger &middot; DBA</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/renten-netto" data-cat="steuern"><span class="tool-emoji">&#x1F474;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>-Netto</div><div class="tool-desc">AHV, PK obligatorisch/&uuml;berobligatorisch, Anlage N-Gre</div></div><span class="tool-tag">Rente &middot; CHF</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/splitting-vorteil/" data-cat="steuern"><span class="tool-emoji">&#x1F46B;</span><div class="tool-info"><div class="tool-name"><span>Splitting</span>-Vorteil</div><div class="tool-desc">Steuerlicher Vorteil durch Ehegattensplitting &sect;&nbsp;32a EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">ESt &middot; &sect;32a EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="steuern"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/zumutbare-belastungen/" data-cat="steuern"><span class="tool-emoji">&#x1F3CB;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">&sect;33 EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/steuerfristen/" data-cat="steuern"><span class="tool-emoji">&#x1F4C5;</span><div class="tool-info"><div class="tool-name"><span>Steuer</span>fristen</div><div class="tool-desc">Abgabetermine und Fristen nach der Abgabenordnung</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Fristen &middot; AO</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/stbvv-rechner/" data-cat="steuern"><span class="tool-emoji">&#x2696;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>StBVV</span>-Rechner</div><div class="tool-desc">Honorare nach StBVV Tab. A, B, C &amp; RVG &sect;&nbsp;13</div></div><span class="tool-tag">StBVV &middot; RVG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <div class="section-label" id="lbl-zukunft">Zukunftsmusik</div>
+    <a class="tool-row standalone" href="https://rglowania.github.io/steuerreform-rechner/" data-cat="zukunft"><span class="tool-emoji">&#x1F504;</span><div class="tool-info"><div class="tool-name"><span>Steuerreform</span>-Rechner</div><div class="tool-desc">Bach/DIW-Reformvorschlag vs. aktueller &sect;&nbsp;32a EStG-Tarif</div></div><span class="tool-tag">ESt &middot; Reform</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/av-depot/" data-cat="zukunft"><span class="tool-emoji">&#x1F4C8;</span><div class="tool-info"><div class="tool-name"><span>Altersvorsorge</span>depot</div><div class="tool-desc">Rechner zum neuen Altersvorsorgedepot &mdash; Riester-Nachfolger</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Riester-Nachfolger</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <div class="section-label" id="lbl-helferlein">Helferlein</div>
+    <a class="tool-row standalone" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/pdf-editor/" data-cat="helferlein"><span class="tool-emoji">&#x1F4C4;</span><div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/feierabend-uhr" data-cat="helferlein"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+  </div>
+
+  <div id="noResults">Keine Tools gefunden.</div>
 
 </div>
 
 <footer>&copy; Robin Glowania</footer>
 
 <script>
-function setTheme(t) {
-  if (t === 'system') {
-    document.documentElement.removeAttribute('data-theme');
-  } else {
-    document.documentElement.setAttribute('data-theme', t);
-  }
-  try { localStorage.setItem('honorly-theme', t); } catch(e){}
-  document.querySelectorAll('.theme-btn').forEach(function(b){ b.classList.remove('active'); });
-  var btn = document.getElementById('btn-' + t);
-  if (btn) btn.classList.add('active');
+function setTheme(t){
+  if(t==='system'){document.documentElement.removeAttribute('data-theme');}
+  else{document.documentElement.setAttribute('data-theme',t);}
+  try{localStorage.setItem('honorly-theme',t);}catch(e){}
+  document.querySelectorAll('.theme-btn').forEach(function(b){b.classList.remove('active');});
+  var btn=document.getElementById('btn-'+t);if(btn)btn.classList.add('active');
 }
-(function(){
-  var saved = 'system';
-  try { saved = localStorage.getItem('honorly-theme') || 'system'; } catch(e){}
-  setTheme(saved);
-})();
-if (new Date() > new Date('2026-04-17')) {
-  ['neu-zeiterfassung','neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen','neu-avdepot'].forEach(function(id){
-    var el = document.getElementById(id);
-    if (el) el.style.display = 'none';
+(function(){var saved='system';try{saved=localStorage.getItem('honorly-theme')||'system';}catch(e){}setTheme(saved);})();
+
+function toggleSection(toggle){
+  toggle.classList.toggle('open');
+  var body=toggle.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+var currentMode = 'all';
+
+function filter(cat, btn){
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  currentMode = cat;
+  document.getElementById('searchInput').value='';
+  document.getElementById('searchClear').style.display='none';
+  document.getElementById('searchIcon').style.display='block';
+  document.getElementById('noResults').style.display='none';
+
+  if(cat==='all'){
+    // Show collapsible blocks, hide flat list
+    document.querySelectorAll('.section-block').forEach(function(b){b.style.display='';});
+    document.getElementById('flatList').style.display='none';
+  } else {
+    // Hide collapsible blocks, show flat list filtered
+    document.querySelectorAll('.section-block').forEach(function(b){b.style.display='none';});
+    document.getElementById('flatList').style.display='';
+    document.querySelectorAll('.tool-row.standalone').forEach(function(r){
+      r.style.display = r.dataset.cat===cat ? 'flex' : 'none';
+    });
+    document.querySelectorAll('.section-label').forEach(function(l){
+      var id=l.id.replace('lbl-','');
+      l.style.display = id===cat ? '' : 'none';
+    });
+  }
+}
+
+function onSearch(val){
+  var q=val.trim().toLowerCase();
+  document.getElementById('searchClear').style.display=q?'block':'none';
+  document.getElementById('searchIcon').style.display=q?'none':'block';
+  if(!q){clearSearch();return;}
+
+  // Switch to flat list mode for search
+  document.querySelectorAll('.section-block').forEach(function(b){b.style.display='none';});
+  document.getElementById('flatList').style.display='';
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+
+  var any=false;
+  document.querySelectorAll('.tool-row.standalone').forEach(function(r){
+    var match=r.textContent.toLowerCase().includes(q);
+    r.style.display=match?'flex':'none';
+    if(match)any=true;
+  });
+  // Show/hide section labels
+  ['steuern','zukunft','helferlein'].forEach(function(cat){
+    var lbl=document.getElementById('lbl-'+cat);
+    var has=false;
+    document.querySelectorAll('.tool-row.standalone[data-cat="'+cat+'"]').forEach(function(r){
+      if(r.style.display!=='none')has=true;
+    });
+    if(lbl)lbl.style.display=has?'':'none';
+  });
+  document.getElementById('noResults').style.display=any?'none':'block';
+}
+
+function clearSearch(){
+  document.getElementById('searchInput').value='';
+  document.getElementById('searchClear').style.display='none';
+  document.getElementById('searchIcon').style.display='block';
+  document.getElementById('noResults').style.display='none';
+  filter('all',document.querySelector('.filter-btn'));
+}
+
+// Hide flat list on load
+document.getElementById('flatList').style.display='none';
+
+// Neu badge expiry
+if(new Date()>new Date('2026-04-17')){
+  ['neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen','neu-avdepot','neu-zeiterfassung'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.style.display='none';
   });
 }
 </script>
