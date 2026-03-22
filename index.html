@@ -49,14 +49,14 @@ h1 a{color:var(--accent);text-decoration:none;}
 .section-toggle{display:flex;align-items:flex-start;justify-content:space-between;cursor:pointer;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);user-select:none;transition:background .2s;}
 .section-toggle:hover{background:var(--surface2);}
 .section-toggle-left{display:flex;flex-direction:column;gap:8px;flex:1;}
-.section-toggle-meta{display:flex;align-items:center;gap:10px;}
-.section-toggle-title{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);}
-.section-toggle-count{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);}
-.section-toggle-arrow{color:var(--text-muted);transition:transform .25s;margin-top:2px;flex-shrink:0;}
+.section-toggle-meta{display:flex;align-items:center;justify-content:space-between;width:100%;}
+.section-toggle-title{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);}
+.section-toggle-count{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);}
+.section-toggle-arrow{color:var(--text-muted);transition:transform .25s;margin-top:2px;flex-shrink:0;margin-left:12px;}
 .section-toggle-arrow svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 .section-toggle.open .section-toggle-arrow{transform:rotate(90deg);}
 .section-preview{display:flex;flex-wrap:wrap;gap:5px;}
-.section-preview-chip{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--text-muted);border:1px solid var(--border);padding:2px 8px;letter-spacing:0.5px;}
+.section-preview-chip{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);border:1px solid var(--border);padding:3px 9px;letter-spacing:0.5px;}
 .section-body{display:none;border-left:3px solid var(--accent);border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
 .section-body.open{display:block;}
 
