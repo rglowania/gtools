@@ -57,6 +57,7 @@ h1 a{color:var(--accent);text-decoration:none;}
 .section-toggle.open .section-toggle-arrow{transform:rotate(90deg);}
 .section-preview{display:flex;flex-wrap:wrap;gap:5px;}
 .section-preview-chip{font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-muted);border:1px solid var(--border);padding:3px 9px;letter-spacing:0.5px;}
+.section-preview-chip.more{color:var(--accent);border-color:var(--accent-dim);background:var(--accent-dim);}
 .section-body{display:none;border-left:3px solid var(--accent);border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
 .section-body.open{display:block;}
 
@@ -103,7 +104,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   </header>
 
   <div class="search-wrap">
-    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 14 Tools …" oninput="onSearch(this.value)">
+    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 15 Tools …" oninput="onSearch(this.value)">
     <span class="search-icon" id="searchIcon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
     <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
@@ -127,11 +128,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
           <span class="section-preview-chip">💶 Brutto-Netto</span>
           <span class="section-preview-chip">🇨🇭 Grenzgänger-Netto</span>
           <span class="section-preview-chip">👴 Renten-Netto</span>
-          <span class="section-preview-chip">👫 Splitting-Vorteil</span>
-          <span class="section-preview-chip">🏥 SV-Beitragssätze</span>
-          <span class="section-preview-chip">🏋️ Zumutbare Belastung</span>
-          <span class="section-preview-chip">📅 Steuerfristen</span>
-          <span class="section-preview-chip">⚖️ StBVV-Rechner</span>
+          <span class="section-preview-chip more">+ 5 weitere</span>
         </div>
       </div>
       <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
@@ -242,26 +239,18 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🛠️ Helferlein</span>
-          <span class="section-toggle-count">4 Tools</span>
+          <span class="section-toggle-count">5 Tools</span>
         </div>
         <div class="section-preview">
-          <span class="section-preview-chip">⏱️ Zeiterfassung</span>
           <span class="section-preview-chip">📄 PDF-Editor</span>
-          <span class="section-preview-chip">📊 Score-Simulator</span>
+          <span class="section-preview-chip">⏱️ Zeiterfassung</span>
           <span class="section-preview-chip">🍺 Feierabend-Uhr</span>
+          <span class="section-preview-chip more">+ 2 weitere</span>
         </div>
       </div>
       <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
     </div>
     <div class="section-body">
-
-      <a class="tool-row" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein">
-        <span class="tool-emoji">&#x23F1;&#xFE0F;</span>
-        <div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div>
-        <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
-        <span class="tool-tag">Zeiterfassung</span>
-        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </a>
 
       <a class="tool-row" href="https://rglowania.github.io/pdf-editor/" data-cat="helferlein">
         <span class="tool-emoji">&#x1F4C4;</span>
@@ -271,11 +260,11 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
-      <a class="tool-row" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein">
-        <span class="tool-emoji">&#x1F4CA;</span>
-        <div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div>
-        <span class="neu-badge" id="neu-score">Neu</span>
-        <span class="tool-tag">Schufa</span>
+      <a class="tool-row" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein">
+        <span class="tool-emoji">&#x23F1;&#xFE0F;</span>
+        <div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div>
+        <span class="neu-badge" id="neu-zeiterfassung">Neu</span>
+        <span class="tool-tag">Zeiterfassung</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -283,6 +272,22 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
         <span class="tool-emoji">&#x1F37A;</span>
         <div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div>
         <span class="tool-tag">Utility</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/nebenkosten/" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F3E0;</span>
+        <div class="tool-info"><div class="tool-name"><span>Nebenkosten</span>abrechnung</div><div class="tool-desc">Nebenkostenabrechnung einfach und schnell erstellen</div></div>
+        <span class="neu-badge" id="neu-nebenkosten">Neu</span>
+        <span class="tool-tag">Immobilien</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F4CA;</span>
+        <div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div>
+        <span class="neu-badge" id="neu-score">Neu</span>
+        <span class="tool-tag">Schufa</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -304,10 +309,11 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/steuerreform-rechner/" data-cat="zukunft"><span class="tool-emoji">&#x1F504;</span><div class="tool-info"><div class="tool-name"><span>Steuerreform</span>-Rechner</div><div class="tool-desc">Bach/DIW-Reformvorschlag vs. aktueller &sect;&nbsp;32a EStG-Tarif</div></div><span class="tool-tag">ESt &middot; Reform</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/av-depot/" data-cat="zukunft"><span class="tool-emoji">&#x1F4C8;</span><div class="tool-info"><div class="tool-name"><span>Altersvorsorge</span>depot</div><div class="tool-desc">Rechner zum neuen Altersvorsorgedepot &mdash; Riester-Nachfolger</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Riester-Nachfolger</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <div class="section-label" id="lbl-helferlein">Helferlein</div>
-    <a class="tool-row standalone" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/pdf-editor/" data-cat="helferlein"><span class="tool-emoji">&#x1F4C4;</span><div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/feierabend-uhr" data-cat="helferlein"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/nebenkosten/" data-cat="helferlein"><span class="tool-emoji">&#x1F3E0;</span><div class="tool-info"><div class="tool-name"><span>Nebenkosten</span>abrechnung</div><div class="tool-desc">Nebenkostenabrechnung einfach und schnell erstellen</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
   </div>
 
   <div id="noResults">Keine Tools gefunden.</div>
