@@ -104,7 +104,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   </header>
 
   <div class="search-wrap">
-    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 15 Tools …" oninput="onSearch(this.value)">
+    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 18 Tools …" oninput="onSearch(this.value)">
     <span class="search-icon" id="searchIcon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
     <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
@@ -122,7 +122,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🧾 Steuern</span>
-          <span class="section-toggle-count">8 Tools</span>
+          <span class="section-toggle-count">9 Tools</span>
         </div>
         <div class="section-preview">
           <span class="section-preview-chip">💶 Brutto-Netto</span>
@@ -169,6 +169,14 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
         <div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div>
         <span class="neu-badge" id="neu-sv">Neu</span>
         <span class="tool-tag">Sozialversicherung</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/aktivrente-minijob" data-cat="steuern">
+        <span class="tool-emoji">&#x1F9D3;</span>
+        <div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div>
+        <span class="neu-badge" id="neu-aktivrente">Neu</span>
+        <span class="tool-tag">Rente &middot; SV</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -239,13 +247,13 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🛠️ Helferlein</span>
-          <span class="section-toggle-count">5 Tools</span>
+          <span class="section-toggle-count">7 Tools</span>
         </div>
         <div class="section-preview">
           <span class="section-preview-chip">📄 PDF-Editor</span>
           <span class="section-preview-chip">⏱️ Zeiterfassung</span>
           <span class="section-preview-chip">🍺 Feierabend-Uhr</span>
-          <span class="section-preview-chip more">+ 2 weitere</span>
+          <span class="section-preview-chip more">+ 4 weitere</span>
         </div>
       </div>
       <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
@@ -272,6 +280,22 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
         <span class="tool-emoji">&#x1F37A;</span>
         <div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div>
         <span class="tool-tag">Utility</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/tilgungsplan" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F4CA;</span>
+        <div class="tool-info"><div class="tool-name"><span>Tilgungs</span>plan</div><div class="tool-desc">Tilgungsplan f&uuml;r Darlehen &mdash; Zinsen, Tilgung, Restschuld</div></div>
+        <span class="neu-badge" id="neu-tilgungsplan">Neu</span>
+        <span class="tool-tag">Immobilien</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/verrechnungskonto" data-cat="helferlein">
+        <span class="tool-emoji">&#x1F4B3;</span>
+        <div class="tool-info"><div class="tool-name"><span>Verrechnungs</span>konto</div><div class="tool-desc">Kapitalertrag und Verrechnungskonto im &Uuml;berblick</div></div>
+        <span class="neu-badge" id="neu-verrechnungskonto">Neu</span>
+        <span class="tool-tag">Kapitalertrag</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -302,6 +326,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/renten-netto" data-cat="steuern"><span class="tool-emoji">&#x1F474;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>-Netto</div><div class="tool-desc">AHV, PK obligatorisch/&uuml;berobligatorisch, Anlage N-Gre</div></div><span class="tool-tag">Rente &middot; CHF</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/splitting-vorteil/" data-cat="steuern"><span class="tool-emoji">&#x1F46B;</span><div class="tool-info"><div class="tool-name"><span>Splitting</span>-Vorteil</div><div class="tool-desc">Steuerlicher Vorteil durch Ehegattensplitting &sect;&nbsp;32a EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">ESt &middot; &sect;32a EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="steuern"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/aktivrente-minijob" data-cat="steuern"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zumutbare-belastungen/" data-cat="steuern"><span class="tool-emoji">&#x1F3CB;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">&sect;33 EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/steuerfristen/" data-cat="steuern"><span class="tool-emoji">&#x1F4C5;</span><div class="tool-info"><div class="tool-name"><span>Steuer</span>fristen</div><div class="tool-desc">Abgabetermine und Fristen nach der Abgabenordnung</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Fristen &middot; AO</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/stbvv-rechner/" data-cat="steuern"><span class="tool-emoji">&#x2696;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>StBVV</span>-Rechner</div><div class="tool-desc">Honorare nach StBVV Tab. A, B, C &amp; RVG &sect;&nbsp;13</div></div><span class="tool-tag">StBVV &middot; RVG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
@@ -312,6 +337,8 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/pdf-editor/" data-cat="helferlein"><span class="tool-emoji">&#x1F4C4;</span><div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zeiterfassung/" data-cat="helferlein"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/feierabend-uhr" data-cat="helferlein"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/tilgungsplan" data-cat="helferlein"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Tilgungs</span>plan</div><div class="tool-desc">Tilgungsplan f&uuml;r Darlehen &mdash; Zinsen, Tilgung, Restschuld</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/verrechnungskonto" data-cat="helferlein"><span class="tool-emoji">&#x1F4B3;</span><div class="tool-info"><div class="tool-name"><span>Verrechnungs</span>konto</div><div class="tool-desc">Kapitalertrag und Verrechnungskonto im &Uuml;berblick</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Kapitalertrag</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/nebenkosten/" data-cat="helferlein"><span class="tool-emoji">&#x1F3E0;</span><div class="tool-info"><div class="tool-name"><span>Nebenkosten</span>abrechnung</div><div class="tool-desc">Nebenkostenabrechnung einfach und schnell erstellen</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/score-simulator/" data-cat="helferlein"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
   </div>
