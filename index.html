@@ -104,7 +104,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   </header>
 
   <div class="search-wrap">
-    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 19 Tools …" oninput="onSearch(this.value)">
+    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 20 Tools …" oninput="onSearch(this.value)">
     <span class="search-icon" id="searchIcon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
     <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
@@ -122,7 +122,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🧾 Steuern</span>
-          <span class="section-toggle-count">9 Tools</span>
+          <span class="section-toggle-count">10 Tools</span>
         </div>
         <div class="section-preview">
           <span class="section-preview-chip">💶 Brutto-Netto</span>
@@ -185,6 +185,14 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
         <div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div>
         <span class="neu-badge" id="neu-zumutbare">Neu</span>
         <span class="tool-tag">&sect;33 EStG</span>
+        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+      </a>
+
+      <a class="tool-row" href="https://rglowania.github.io/kpa/" data-cat="steuern">
+        <span class="tool-emoji">&#x1F3E0;</span>
+        <div class="tool-info"><div class="tool-name"><span>Kaufpreis</span>aufteilung</div><div class="tool-desc">Aufteilung des Kaufpreises auf Grund und Geb&auml;ude &mdash; Eink&uuml;nfte aus V+V</div></div>
+        <span class="neu-badge" id="neu-kpa">Neu</span>
+        <span class="tool-tag">Eink&uuml;nfte aus V+V</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -336,6 +344,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="steuern"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/aktivrente-minijob" data-cat="steuern"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zumutbare-belastungen/" data-cat="steuern"><span class="tool-emoji">&#x1F3CB;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">&sect;33 EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/kpa/" data-cat="steuern"><span class="tool-emoji">&#x1F3E0;</span><div class="tool-info"><div class="tool-name"><span>Kaufpreis</span>aufteilung</div><div class="tool-desc">Aufteilung des Kaufpreises auf Grund und Geb&auml;ude &mdash; Eink&uuml;nfte aus V+V</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Eink&uuml;nfte aus V+V</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/steuerfristen/" data-cat="steuern"><span class="tool-emoji">&#x1F4C5;</span><div class="tool-info"><div class="tool-name"><span>Steuer</span>fristen</div><div class="tool-desc">Abgabetermine und Fristen nach der Abgabenordnung</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Fristen &middot; AO</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/stbvv-rechner/" data-cat="steuern"><span class="tool-emoji">&#x2696;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>StBVV</span>-Rechner</div><div class="tool-desc">Honorare nach StBVV Tab. A, B, C &amp; RVG &sect;&nbsp;13</div></div><span class="tool-tag">StBVV &middot; RVG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <div class="section-label" id="lbl-zukunft">Zukunftsmusik</div>
@@ -445,7 +454,7 @@ document.getElementById('flatList').style.display='none';
 
 // Neu badge expiry
 if(new Date()>new Date('2026-04-17')){
-  ['neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen','neu-avdepot','neu-zeiterfassung'].forEach(function(id){
+  ['neu-splitting','neu-zumutbare','neu-score','neu-pdfeditor','neu-sv','neu-steuerfristen','neu-avdepot','neu-zeiterfassung','neu-nebenkosten','neu-aktivrente','neu-tilgungsplan','neu-verrechnungskonto','neu-girocode','neu-kpa'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.style.display='none';
   });
 }
