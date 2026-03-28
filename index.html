@@ -104,7 +104,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   </header>
 
   <div class="search-wrap">
-    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 20 Tools …" oninput="onSearch(this.value)">
+    <input class="search-input" id="searchInput" type="text" placeholder="Durchsuche 19 Tools …" oninput="onSearch(this.value)">
     <span class="search-icon" id="searchIcon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
     <button class="search-clear" id="searchClear" onclick="clearSearch()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
   </div>
@@ -122,13 +122,14 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🧾 Steuern</span>
-          <span class="section-toggle-count">10 Tools</span>
+          <span class="section-toggle-count">9 Tools</span>
         </div>
         <div class="section-preview">
-          <span class="section-preview-chip">💶 Brutto-Netto</span>
-          <span class="section-preview-chip">🇨🇭 Grenzgänger-Netto</span>
+        <div class="section-preview">
+          <span class="section-preview-chip">💶 Brutto-Netto (inkl. Grenzgänger 🇨🇭)</span>
           <span class="section-preview-chip">👴 Renten-Netto</span>
-          <span class="section-preview-chip more">+ 5 weitere</span>
+          <span class="section-preview-chip">👫 Splitting-Vorteil</span>
+          <span class="section-preview-chip more">+ 6 weitere</span>
         </div>
       </div>
       <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
@@ -137,15 +138,8 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
       <a class="tool-row" href="https://rglowania.github.io/brutto-netto" data-cat="steuern">
         <span class="tool-emoji">&#x1F4B6;</span>
-        <div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto</div><div class="tool-desc">Nettolohnberechnung &mdash; ESt, SolZ, Sozialversicherung</div></div>
+        <div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto (inkl. Grenzg&auml;nger &#x1F1E8;&#x1F1ED;)</div><div class="tool-desc">Nettolohnberechnung inkl. Grenzg&auml;nger CH &mdash; ESt, SolZ, Sozialversicherung</div></div>
         <span class="tool-tag">Lohn &middot; ESt</span>
-        <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-      </a>
-
-      <a class="tool-row" href="https://rglowania.github.io/gg-netto" data-cat="steuern">
-        <span class="tool-emoji">&#x1F1E8;&#x1F1ED;</span>
-        <div class="tool-info"><div class="tool-name"><span>Grenzg&auml;nger</span>-Netto</div><div class="tool-desc">Quellensteuer, Tarifkorrektur, Sozialversicherung D/CH</div></div>
-        <span class="tool-tag">Grenzg&auml;nger &middot; DBA</span>
         <span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
       </a>
 
@@ -337,8 +331,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   <!-- Flat standalone rows for filter mode (hidden in "all" mode) -->
   <div id="flatList">
     <div class="section-label" id="lbl-steuern">Steuern</div>
-    <a class="tool-row standalone" href="https://rglowania.github.io/brutto-netto" data-cat="steuern"><span class="tool-emoji">&#x1F4B6;</span><div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto</div><div class="tool-desc">Nettolohnberechnung &mdash; ESt, SolZ, Sozialversicherung</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/gg-netto" data-cat="steuern"><span class="tool-emoji">&#x1F1E8;&#x1F1ED;</span><div class="tool-info"><div class="tool-name"><span>Grenzg&auml;nger</span>-Netto</div><div class="tool-desc">Quellensteuer, Tarifkorrektur, Sozialversicherung D/CH</div></div><span class="tool-tag">Grenzg&auml;nger &middot; DBA</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/brutto-netto" data-cat="steuern"><span class="tool-emoji">&#x1F4B6;</span><div class="tool-info"><div class="tool-name"><span>Brutto</span>-Netto (inkl. Grenzg&auml;nger &#x1F1E8;&#x1F1ED;)</div><div class="tool-desc">Nettolohnberechnung inkl. Grenzg&auml;nger CH &mdash; ESt, SolZ, Sozialversicherung</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/renten-netto" data-cat="steuern"><span class="tool-emoji">&#x1F474;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>-Netto</div><div class="tool-desc">AHV, PK obligatorisch/&uuml;berobligatorisch, Anlage N-Gre</div></div><span class="tool-tag">Rente &middot; CHF</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/splitting-vorteil/" data-cat="steuern"><span class="tool-emoji">&#x1F46B;</span><div class="tool-info"><div class="tool-name"><span>Splitting</span>-Vorteil</div><div class="tool-desc">Steuerlicher Vorteil durch Ehegattensplitting &sect;&nbsp;32a EStG</div></div><span class="neu-badge">Neu</span><span class="tool-tag">ESt &middot; &sect;32a EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="steuern"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
