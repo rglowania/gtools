@@ -46,13 +46,13 @@ h1 a{color:var(--accent);text-decoration:none;}
 
 /* Collapsible section (used in "Alle" mode) */
 .section-block{margin-bottom:12px;}
-.section-toggle{display:flex;align-items:flex-start;justify-content:space-between;cursor:pointer;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);user-select:none;transition:background .2s;}
+.section-toggle{display:flex;align-items:flex-start;justify-content:space-between;cursor:pointer;padding:16px 18px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);user-select:none;transition:background .2s;gap:12px;}
 .section-toggle:hover{background:var(--surface2);}
-.section-toggle-left{display:flex;flex-direction:column;gap:8px;flex:1;}
+.section-toggle-left{display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;}
 .section-toggle-meta{display:flex;align-items:center;justify-content:space-between;width:100%;}
 .section-toggle-title{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);}
 .section-toggle-count{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--text-muted);}
-.section-toggle-arrow{color:var(--text-muted);transition:transform .25s;margin-top:2px;flex-shrink:0;margin-left:12px;}
+.section-toggle-arrow{color:var(--text-muted);transition:transform .25s;flex-shrink:0;margin-top:3px;}
 .section-toggle-arrow svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 .section-toggle.open .section-toggle-arrow{transform:rotate(90deg);}
 .section-preview{display:flex;flex-wrap:wrap;gap:5px;}
@@ -124,7 +124,6 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
           <span class="section-toggle-title">🧾 Steuern</span>
           <span class="section-toggle-count">9 Tools</span>
         </div>
-        <div class="section-preview">
         <div class="section-preview">
           <span class="section-preview-chip">💶 Brutto-Netto (inkl. Grenzgänger 🇨🇭)</span>
           <span class="section-preview-chip">👴 Renten-Netto</span>
