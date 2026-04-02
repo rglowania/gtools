@@ -52,7 +52,9 @@ h1 a{color:var(--accent);text-decoration:none;}
 .section-preview{display:flex;flex-wrap:wrap;gap:6px;}
 .section-preview-chip{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-muted);border:1px solid var(--border);padding:4px 11px;letter-spacing:0.5px;}
 .section-preview-chip.more{color:var(--accent);border-color:var(--accent-dim);background:var(--accent-dim);}
+.section-block.filtered .section-preview{display:none;}
 .section-body{display:none;border-left:3px solid var(--accent);border-bottom:1px solid var(--border);border-right:1px solid var(--border);}
+.section-toggle.open .section-preview{display:none;}
 .section-body.open{display:block;}
 .section-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin:24px 0 8px;padding-bottom:8px;border-bottom:1px solid var(--border);display:none;}
 .tool-row{display:flex;align-items:center;text-decoration:none;background:var(--surface);border-bottom:1px solid var(--border);padding:13px 16px;position:relative;transition:background .2s;gap:14px;}
@@ -248,7 +250,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
 
 </div>
 
-<footer>&copy; Robin Glowania &middot; Zuletzt aktualisiert: 01.04.2026</footer>
+<footer>&copy; Robin Glowania &middot; Zuletzt aktualisiert: 02.04.2026</footer>
 
 <script>
 function setTheme(t){
@@ -273,17 +275,26 @@ function filter(cat,btn){
   document.getElementById('searchIcon').style.display='block';
   document.getElementById('noResults').style.display='none';
   if(cat==='all'){
-    document.querySelectorAll('.section-block').forEach(function(b){b.style.display='';});
+    document.querySelectorAll('.section-block').forEach(function(b){
+      b.style.display='';
+      b.classList.remove('filtered');
+    });
     document.getElementById('flatList').style.display='none';
   } else {
-    document.querySelectorAll('.section-block').forEach(function(b){b.style.display='none';});
-    document.getElementById('flatList').style.display='';
-    document.querySelectorAll('.tool-row.standalone').forEach(function(r){
-      r.style.display=r.dataset.cat===cat?'flex':'none';
+    document.querySelectorAll('.section-block').forEach(function(b){
+      if(b.dataset.cat===cat){
+        b.style.display='';
+        b.classList.add('filtered');
+        // Auto-open
+        var toggle=b.querySelector('.section-toggle');
+        var body=b.querySelector('.section-body');
+        if(toggle&&body){toggle.classList.add('open');body.classList.add('open');}
+      } else {
+        b.style.display='none';
+        b.classList.remove('filtered');
+      }
     });
-    document.querySelectorAll('.section-label').forEach(function(l){
-      l.style.display=l.id.replace('lbl-','')===cat?'':'none';
-    });
+    document.getElementById('flatList').style.display='none';
   }
 }
 
