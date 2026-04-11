@@ -103,6 +103,7 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <button class="filter-btn" onclick="filter('steuern',this)">Steuern</button>
     <button class="filter-btn" onclick="filter('buchhaltung',this)">Buchhaltung</button>
     <button class="filter-btn" onclick="filter('lohn',this)">Lohn</button>
+    <button class="filter-btn" onclick="filter('finanzen',this)">Finanzen</button>
     <button class="filter-btn" onclick="filter('sonstiges',this)">Sonstiges</button>
   </div>
 
@@ -185,19 +186,44 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     </div>
   </div>
 
-  <!-- ══ SONSTIGES (7 Tools) ══ -->
+  <!-- ══ FINANZEN (4 Tools) ══ -->
+  <div class="section-block" data-cat="finanzen">
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <div class="section-toggle-left">
+        <div class="section-toggle-meta">
+          <span class="section-toggle-title">💰 Finanzen</span>
+          <span class="section-toggle-count">4 Tools</span>
+        </div>
+        <div class="section-preview">
+          <span class="section-preview-chip">💱 Wechselkurse</span>
+          <span class="section-preview-chip">🏦 IBAN-Rechner</span>
+          <span class="section-preview-chip">📱 GiroCode</span>
+          <span class="section-preview-chip more">+ 1 weitere</span>
+        </div>
+      </div>
+      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </div>
+    <div class="section-body">
+      <a class="tool-row" href="https://rglowania.github.io/wechselkurse" data-cat="finanzen"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="neu-badge" id="neu-exchange">Neu</span><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/iban-rechner" data-cat="finanzen"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="neu-badge" id="neu-iban">Neu</span><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/giro-code/" data-cat="finanzen"><span class="tool-emoji">&#x1F4F1;</span><div class="tool-info"><div class="tool-name"><span>Giro</span>Code</div><div class="tool-desc">QR-Code f&uuml;r &Uuml;berweisungen per GiroCode generieren</div></div><span class="neu-badge" id="neu-girocode">Neu</span><span class="tool-tag">Zahlungsverkehr</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/autokosten/" data-cat="finanzen"><span class="tool-emoji">&#x1F697;</span><div class="tool-info"><div class="tool-name"><span>Auto</span>kosten</div><div class="tool-desc">Fahrzeugkosten im &Uuml;berblick &mdash; Fixkosten, Verbrauch, Gesamtkosten</div></div><span class="neu-badge" id="neu-autokosten">Neu</span><span class="tool-tag">Kosten</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    </div>
+  </div>
+
+  <!-- ══ SONSTIGES (4 Tools) ══ -->
   <div class="section-block" data-cat="sonstiges">
     <div class="section-toggle" onclick="toggleSection(this)">
       <div class="section-toggle-left">
         <div class="section-toggle-meta">
           <span class="section-toggle-title">🛠️ Sonstiges</span>
-          <span class="section-toggle-count">8 Tools</span>
+          <span class="section-toggle-count">4 Tools</span>
         </div>
         <div class="section-preview">
           <span class="section-preview-chip">📄 PDF-Editor</span>
           <span class="section-preview-chip">⏱️ Zeiterfassung</span>
-          <span class="section-preview-chip">💱 Wechselkurse</span>
-          <span class="section-preview-chip more">+ 5 weitere</span>
+          <span class="section-preview-chip">🍺 Feierabend-Uhr</span>
+          <span class="section-preview-chip more">+ 1 weitere</span>
         </div>
       </div>
       <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
@@ -205,12 +231,8 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <div class="section-body">
       <a class="tool-row" href="https://rglowania.github.io/pdf-editor/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4C4;</span><div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div><span class="neu-badge" id="neu-pdfeditor">Neu</span><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="tool-row" href="https://rglowania.github.io/zeiterfassung/" data-cat="sonstiges"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge" id="neu-zeiterfassung">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/wechselkurse" data-cat="sonstiges"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="neu-badge" id="neu-exchange">Neu</span><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="tool-row" href="https://rglowania.github.io/feierabend-uhr" data-cat="sonstiges"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/iban-rechner" data-cat="sonstiges"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="neu-badge" id="neu-iban">Neu</span><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/giro-code/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4F1;</span><div class="tool-info"><div class="tool-name"><span>Giro</span>Code</div><div class="tool-desc">QR-Code f&uuml;r &Uuml;berweisungen per GiroCode generieren</div></div><span class="neu-badge" id="neu-girocode">Neu</span><span class="tool-tag">Zahlungsverkehr</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="tool-row" href="https://rglowania.github.io/score-simulator/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge" id="neu-score">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/autokosten/" data-cat="sonstiges"><span class="tool-emoji">&#x1F697;</span><div class="tool-info"><div class="tool-name"><span>Auto</span>kosten</div><div class="tool-desc">Fahrzeugkosten im &Uuml;berblick &mdash; Fixkosten, Verbrauch, Gesamtkosten</div></div><span class="neu-badge" id="neu-autokosten">Neu</span><span class="tool-tag">Kosten</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     </div>
   </div>
 
@@ -235,22 +257,23 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/verrechnungskonto" data-cat="buchhaltung"><span class="tool-emoji">&#x1F4B3;</span><div class="tool-info"><div class="tool-name"><span>Verrechnungs</span>konto</div><div class="tool-desc">GmbH-Gesellschafter Verrechnungskonto &mdash; Zinsen und Salden</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Kapitalertrag</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/tilgungsplan" data-cat="buchhaltung"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Tilgungs</span>plan</div><div class="tool-desc">Tilgungsplan f&uuml;r Darlehen &mdash; Zinsen, Tilgung, Restschuld</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/nebenkosten/" data-cat="buchhaltung"><span class="tool-emoji">&#x1F3E0;</span><div class="tool-info"><div class="tool-name"><span>Nebenkosten</span>abrechnung</div><div class="tool-desc">Nebenkostenabrechnung einfach und schnell erstellen</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <div class="section-label" id="lbl-finanzen">Finanzen</div>
+    <a class="tool-row standalone" href="https://rglowania.github.io/wechselkurse" data-cat="finanzen"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="neu-badge">Neu</span><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/iban-rechner" data-cat="finanzen"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/giro-code/" data-cat="finanzen"><span class="tool-emoji">&#x1F4F1;</span><div class="tool-info"><div class="tool-name"><span>Giro</span>Code</div><div class="tool-desc">QR-Code f&uuml;r &Uuml;berweisungen per GiroCode generieren</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zahlungsverkehr</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/autokosten/" data-cat="finanzen"><span class="tool-emoji">&#x1F697;</span><div class="tool-info"><div class="tool-name"><span>Auto</span>kosten</div><div class="tool-desc">Fahrzeugkosten im &Uuml;berblick &mdash; Fixkosten, Verbrauch, Gesamtkosten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Kosten</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <div class="section-label" id="lbl-sonstiges">Sonstiges</div>
     <a class="tool-row standalone" href="https://rglowania.github.io/pdf-editor/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4C4;</span><div class="tool-info"><div class="tool-name"><span>PDF</span>-Editor</div><div class="tool-desc">PDF-Dateien direkt im Browser bearbeiten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zeiterfassung/" data-cat="sonstiges"><span class="tool-emoji">&#x23F1;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zeit</span>erfassung</div><div class="tool-desc">Zeiterfassung und Projektverwaltung im Browser</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zeiterfassung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/wechselkurse" data-cat="sonstiges"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="neu-badge">Neu</span><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/feierabend-uhr" data-cat="sonstiges"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/iban-rechner" data-cat="sonstiges"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/giro-code/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4F1;</span><div class="tool-info"><div class="tool-name"><span>Giro</span>Code</div><div class="tool-desc">QR-Code f&uuml;r &Uuml;berweisungen per GiroCode generieren</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Zahlungsverkehr</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/score-simulator/" data-cat="sonstiges"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Score</span>-Simulator</div><div class="tool-desc">Simulation und Analyse von SCHUFA-Scores</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Schufa</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/autokosten/" data-cat="sonstiges"><span class="tool-emoji">&#x1F697;</span><div class="tool-info"><div class="tool-name"><span>Auto</span>kosten</div><div class="tool-desc">Fahrzeugkosten im &Uuml;berblick &mdash; Fixkosten, Verbrauch, Gesamtkosten</div></div><span class="neu-badge">Neu</span><span class="tool-tag">Kosten</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
   </div>
 
   <div id="noResults">Keine Tools gefunden.</div>
 
 </div>
 
-<footer>&copy; Robin Glowania &middot; Zuletzt aktualisiert: 10.04.2026</footer>
+<footer>&copy; Robin Glowania &middot; Zuletzt aktualisiert: 11.04.2026</footer>
 
 <script>
 function setTheme(t){
@@ -312,7 +335,7 @@ function onSearch(val){
     r.style.display=match?'flex':'none';
     if(match)any=true;
   });
-  ['steuern','lohn','buchhaltung','sonstiges'].forEach(function(cat){
+  ['steuern','buchhaltung','lohn','finanzen','sonstiges'].forEach(function(cat){
     var lbl=document.getElementById('lbl-'+cat);
     var has=false;
     document.querySelectorAll('.tool-row.standalone[data-cat="'+cat+'"]').forEach(function(r){
