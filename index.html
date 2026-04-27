@@ -101,8 +101,8 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
   <div class="filter-bar">
     <button class="filter-btn active" onclick="filter('all',this)">Alle</button>
     <button class="filter-btn" onclick="filter('steuern',this)">Steuern</button>
-    <button class="filter-btn" onclick="filter('finanzen',this)">Finanzen</button>
     <button class="filter-btn" onclick="filter('lohn',this)">Lohn</button>
+    <button class="filter-btn" onclick="filter('finanzen',this)">Finanzen</button>
     <button class="filter-btn" onclick="filter('sonstiges',this)">Sonstiges</button>
   </div>
 
@@ -137,6 +137,31 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     </div>
   </div>
 
+  <!-- ══ LOHN (3 Tools) ══ -->
+  <div class="section-block" data-cat="lohn">
+    <div class="section-toggle" onclick="toggleSection(this)">
+      <div class="section-toggle-left">
+        <div class="section-toggle-meta">
+          <span class="section-toggle-title">💼 Lohn</span>
+          <span class="section-toggle-count">4</span>
+        </div>
+        <div class="section-preview">
+          <span class="section-preview-chip">👴 AktivRente &amp; Minijob</span>
+          <span class="section-preview-chip">📋 Lohnabrechnung</span>
+          <span class="section-preview-chip">💰 Rentenrechner</span>
+          <span class="section-preview-chip more">+ 1 weitere</span>
+        </div>
+      </div>
+      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
+    </div>
+    <div class="section-body">
+      <a class="tool-row" href="https://rglowania.github.io/aktivrente-minijob" data-cat="lohn"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/lohnabrechnung" data-cat="lohn"><span class="tool-emoji">&#x1F4CB;</span><div class="tool-info"><div class="tool-name"><span>Lohn</span>abrechnung</div><div class="tool-desc">Lohnabrechnung f&uuml;r Arbeitgeber &mdash; Brutto, Netto, Abz&uuml;ge</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/rentenrechner/" data-cat="lohn"><span class="tool-emoji">&#x1F4B0;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>rechner</div><div class="tool-desc">Gesetzliche Rente berechnen &mdash; Entgeltpunkte, Rentenfaktor, Auszahlung</div></div><span class="tool-tag">Rente</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+      <a class="tool-row" href="https://rglowania.github.io/sv" data-cat="lohn"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    </div>
+  </div>
+
   <!-- ══ FINANZEN (4 Tools) ══ -->
   <div class="section-block" data-cat="finanzen">
     <div class="section-toggle" onclick="toggleSection(this)">
@@ -160,31 +185,6 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
       <a class="tool-row" href="https://rglowania.github.io/iban-rechner" data-cat="finanzen"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="tool-row" href="https://rglowania.github.io/tilgungsplan" data-cat="finanzen"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Tilgungs</span>plan</div><div class="tool-desc">Tilgungsplan f&uuml;r Darlehen &mdash; Zinsen, Tilgung, Restschuld</div></div><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
       <a class="tool-row" href="https://rglowania.github.io/wechselkurse" data-cat="finanzen"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    </div>
-  </div>
-
-  <!-- ══ LOHN (3 Tools) ══ -->
-  <div class="section-block" data-cat="lohn">
-    <div class="section-toggle" onclick="toggleSection(this)">
-      <div class="section-toggle-left">
-        <div class="section-toggle-meta">
-          <span class="section-toggle-title">💼 Lohn</span>
-          <span class="section-toggle-count">4</span>
-        </div>
-        <div class="section-preview">
-          <span class="section-preview-chip">👴 AktivRente &amp; Minijob</span>
-          <span class="section-preview-chip">📋 Lohnabrechnung</span>
-          <span class="section-preview-chip">💰 Rentenrechner</span>
-          <span class="section-preview-chip more">+ 1 weitere</span>
-        </div>
-      </div>
-      <span class="section-toggle-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span>
-    </div>
-    <div class="section-body">
-      <a class="tool-row" href="https://rglowania.github.io/aktivrente-minijob" data-cat="lohn"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/lohnabrechnung" data-cat="lohn"><span class="tool-emoji">&#x1F4CB;</span><div class="tool-info"><div class="tool-name"><span>Lohn</span>abrechnung</div><div class="tool-desc">Lohnabrechnung f&uuml;r Arbeitgeber &mdash; Brutto, Netto, Abz&uuml;ge</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/rentenrechner/" data-cat="lohn"><span class="tool-emoji">&#x1F4B0;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>rechner</div><div class="tool-desc">Gesetzliche Rente berechnen &mdash; Entgeltpunkte, Rentenfaktor, Auszahlung</div></div><span class="tool-tag">Rente</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-      <a class="tool-row" href="https://rglowania.github.io/sv" data-cat="lohn"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     </div>
   </div>
 
@@ -228,17 +228,17 @@ footer{text-align:center;padding:32px 0 24px;font-family:'IBM Plex Mono',monospa
     <a class="tool-row standalone" href="https://rglowania.github.io/verrechnungskonto" data-cat="steuern"><span class="tool-emoji">&#x1F4B3;</span><div class="tool-info"><div class="tool-name"><span>Verrechnungs</span>konto</div><div class="tool-desc">GmbH-Gesellschafter Verrechnungskonto &mdash; Zinsen und Salden</div></div><span class="tool-tag">Kapitalertrag</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zinsrechner/" data-cat="steuern"><span class="tool-emoji">&#x1F4B9;</span><div class="tool-info"><div class="tool-name"><span>Zinsrechner</span> AO</div><div class="tool-desc">Zinsen und Zinseszins berechnen &mdash; Kapitalertragsteuer ber&uuml;cksichtigt</div></div><span class="tool-tag">Zinsen &middot; KESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/zumutbare-belastungen/" data-cat="steuern"><span class="tool-emoji">&#x1F3CB;&#xFE0F;</span><div class="tool-info"><div class="tool-name"><span>Zumutbare</span> Belastung</div><div class="tool-desc">Au&szlig;ergew&ouml;hnliche Belastungen nach &sect;&nbsp;33 EStG</div></div><span class="tool-tag">&sect;33 EStG</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <div class="section-label" id="lbl-lohn">Lohn</div>
+    <a class="tool-row standalone" href="https://rglowania.github.io/aktivrente-minijob" data-cat="lohn"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/lohnabrechnung" data-cat="lohn"><span class="tool-emoji">&#x1F4CB;</span><div class="tool-info"><div class="tool-name"><span>Lohn</span>abrechnung</div><div class="tool-desc">Lohnabrechnung f&uuml;r Arbeitgeber &mdash; Brutto, Netto, Abz&uuml;ge</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/rentenrechner/" data-cat="lohn"><span class="tool-emoji">&#x1F4B0;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>rechner</div><div class="tool-desc">Gesetzliche Rente berechnen &mdash; Entgeltpunkte, Rentenfaktor, Auszahlung</div></div><span class="tool-tag">Rente</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
+    <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="lohn"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <div class="section-label" id="lbl-finanzen">Finanzen</div>
     <a class="tool-row standalone" href="https://rglowania.github.io/autokosten/" data-cat="finanzen"><span class="tool-emoji">&#x1F697;</span><div class="tool-info"><div class="tool-name"><span>Auto</span>kosten</div><div class="tool-desc">Fahrzeugkosten im &Uuml;berblick &mdash; Fixkosten, Verbrauch, Gesamtkosten</div></div><span class="tool-tag">Kosten</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/giro-code/" data-cat="finanzen"><span class="tool-emoji">&#x1F4F1;</span><div class="tool-info"><div class="tool-name"><span>Giro</span>Code</div><div class="tool-desc">QR-Code f&uuml;r &Uuml;berweisungen per GiroCode generieren</div></div><span class="tool-tag">Zahlungsverkehr</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/iban-rechner" data-cat="finanzen"><span class="tool-emoji">&#x1F3E6;</span><div class="tool-info"><div class="tool-name"><span>IBAN</span>-Rechner</div><div class="tool-desc">IBAN berechnen, pr&uuml;fen und BIC ermitteln</div></div><span class="tool-tag">Banking</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/tilgungsplan" data-cat="finanzen"><span class="tool-emoji">&#x1F4CA;</span><div class="tool-info"><div class="tool-name"><span>Tilgungs</span>plan</div><div class="tool-desc">Tilgungsplan f&uuml;r Darlehen &mdash; Zinsen, Tilgung, Restschuld</div></div><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/wechselkurse" data-cat="finanzen"><span class="tool-emoji">&#x1F4B1;</span><div class="tool-info"><div class="tool-name"><span>Wechsel</span>kurse</div><div class="tool-desc">Aktuelle Wechselkurse im &Uuml;berblick</div></div><span class="tool-tag">W&auml;hrung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <div class="section-label" id="lbl-lohn">Lohn</div>
-    <a class="tool-row standalone" href="https://rglowania.github.io/aktivrente-minijob" data-cat="lohn"><span class="tool-emoji">&#x1F9D3;</span><div class="tool-info"><div class="tool-name"><span>AktivRente</span> &amp; Minijob</div><div class="tool-desc">Hinzuverdienstgrenzen und SV-Pflicht f&uuml;r Rentner im Minijob</div></div><span class="tool-tag">Rente &middot; SV</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/lohnabrechnung" data-cat="lohn"><span class="tool-emoji">&#x1F4CB;</span><div class="tool-info"><div class="tool-name"><span>Lohn</span>abrechnung</div><div class="tool-desc">Lohnabrechnung f&uuml;r Arbeitgeber &mdash; Brutto, Netto, Abz&uuml;ge</div></div><span class="tool-tag">Lohn &middot; ESt</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/rentenrechner/" data-cat="lohn"><span class="tool-emoji">&#x1F4B0;</span><div class="tool-info"><div class="tool-name"><span>Renten</span>rechner</div><div class="tool-desc">Gesetzliche Rente berechnen &mdash; Entgeltpunkte, Rentenfaktor, Auszahlung</div></div><span class="tool-tag">Rente</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
-    <a class="tool-row standalone" href="https://rglowania.github.io/sv" data-cat="lohn"><span class="tool-emoji">&#x1F3E5;</span><div class="tool-info"><div class="tool-name"><span>SV</span>-Beitragss&auml;tze</div><div class="tool-desc">KV, PV, RV, AV &mdash; aktuelle Beitragss&auml;tze</div></div><span class="tool-tag">Sozialversicherung</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <div class="section-label" id="lbl-sonstiges">Sonstiges</div>
     <a class="tool-row standalone" href="https://rglowania.github.io/feierabend-uhr" data-cat="sonstiges"><span class="tool-emoji">&#x1F37A;</span><div class="tool-info"><div class="tool-name"><span>Feier</span>abend-Uhr</div><div class="tool-desc">Wann ist endlich Feierabend?</div></div><span class="tool-tag">Utility</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
     <a class="tool-row standalone" href="https://rglowania.github.io/nebenkosten/" data-cat="sonstiges"><span class="tool-emoji">&#x1F3E0;</span><div class="tool-info"><div class="tool-name"><span>Nebenkosten</span>abrechnung</div><div class="tool-desc">Nebenkostenabrechnung einfach und schnell erstellen</div></div><span class="tool-tag">Immobilien</span><span class="tool-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span></a>
@@ -314,7 +314,7 @@ function onSearch(val){
     r.style.display=match?'flex':'none';
     if(match)any=true;
   });
-  ['steuern','finanzen','lohn','sonstiges'].forEach(function(cat){
+  ['steuern','lohn','finanzen','sonstiges'].forEach(function(cat){
     var lbl=document.getElementById('lbl-'+cat);
     var has=false;
     document.querySelectorAll('.tool-row.standalone[data-cat="'+cat+'"]').forEach(function(r){
